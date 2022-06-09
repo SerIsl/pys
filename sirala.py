@@ -2,13 +2,17 @@
 all = []
 entry = ""
 while True:
-    entry = input('giriş yap:')
+    entry = input('Bitirmek için ok yaz!\ngiriş yap:\t')
     if entry == "ok":
         break
     
-    all.append(int(entry))
+    if int(entry) in all:
+        print("Bu kayıt daha önce girilmiş başka bir sayı ile tekrar dene!")
+        continue
+    else:    
+        all.append(int(entry))
 
 all.sort()
 print(*all, sep="\n")
-print(len(all))
+print("Toplam kayıt sayısı:", len(all))
 
