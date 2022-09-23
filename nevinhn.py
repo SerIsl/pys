@@ -37,4 +37,7 @@ a = list(map(cells, sozluk))
 
 c = [x for b in a for x in b]
 
-print(*sorted(c, key=lambda x: int(x["Kasa No"][1:])), sep='\n')
+d = sorted(c, key=lambda x: int(x["Kasa No"][1:]))
+
+df_d = pd.DataFrame(d)
+df_d.to_excel("deneme.xlsx")
