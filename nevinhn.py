@@ -6,7 +6,7 @@ df = pd.read_excel("DemonteM20220000000372.xls")
 sozluk = df.to_dict("records")
 
 dict_3 = sozluk[133]
-print(sozluk)
+# print(sozluk)
 
 def cells(satir):
     malzeme_kodu = ""
@@ -30,7 +30,11 @@ def cells(satir):
             tempdict["adet"] = adet
             mydict1.append(tempdict)
 
-    print(*mydict1, sep="\n")
+    return mydict1    
+            
 
+a = list(map(cells, sozluk))
 
+c = [x for b in a for x in b]
 
+print(*sorted(c, key=lambda x: int(x["Kasa No"][1:])), sep='\n')
