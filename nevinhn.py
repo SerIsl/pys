@@ -1,7 +1,7 @@
 from unicodedata import numeric
 import pandas as pd
 
-dosya = "Kopya DemonteM20220000000375.xlsx"
+dosya = "DemonteM20220000000429.xls"
 
 df = pd.read_excel(dosya)
 

@@ -1,6 +1,8 @@
 from funcs import *
   
 while True:
+
+    print("-"*50)
     print("Çıkmak için q'ya basın.")
     barkod = input("Barkod numarasını girin:")
     
@@ -24,3 +26,4 @@ while True:
   
         
     seriNum(barkod, isEmrim, hafta, adet)
+    print("-"*50)
