@@ -3,7 +3,7 @@ from seri_num import *
   
 while True:
 
-    
+    print()
     print("Çıkmak için q'ya basın.")
     barkod = input("Barkod numarasını girin:")
     
