@@ -1,15 +1,16 @@
 from funcs import *
+from seri_num import *
   
 while True:
 
-    print("-"*50)
+    
     print("Çıkmak için q'ya basın.")
     barkod = input("Barkod numarasını girin:")
     
     if barkod.lower()  == "q":
         break
 
-    isEmrim = isEmri(input("İş emri numarasını girin:"))
+    isEmrim = input("İş emri numarasını girin:")
     
     if isEmrim.lower() == 'q':
         break
@@ -25,5 +26,7 @@ while True:
         break
   
         
-    seriNum(barkod, isEmrim, hafta, adet)
-    print("-"*50)
+    seri = SeriNum(barkod, isEmrim, hafta, adet)
+    seri.printe()
+
+
