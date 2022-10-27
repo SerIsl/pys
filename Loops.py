@@ -2621,22 +2621,42 @@ countries = [
 ]
 
 
-languages = {}
+# languages = {}
 
-for country in countries:
-    for lang in country["languages"]:
-        if lang not in languages.keys():
-                languages[lang] = 1
-        elif lang in languages.keys():
-                languages[lang] += 1
+# for country in countries:
+#     for lang in country["languages"]:
+#         if lang not in languages.keys():
+#                 languages[lang] = 1
+#         elif lang in languages.keys():
+#                 languages[lang] += 1
 
-# print(*languages.items(), sep="\n")
-languages_lst = [(B, i) for i, B in languages.items()]
-languages_lst.sort(reverse=True)
-print(*languages_lst[:10], sep="\n")
+# # print(*languages.items(), sep="\n")
+# languages_lst = [(B, i) for i, B in languages.items()]
+# languages_lst.sort(reverse=True)
+# print(*languages_lst[:10], sep="\n")
 
-population = []
-for count in countries:
-    population.append((count["population"], count["name"]))
-population.sort(reverse=True)
-print(*population[:10], sep="\n")
+# population = []
+# for count in countries:
+#     population.append((count["population"], count["name"]))
+# population.sort(reverse=True)
+# print(*population[:10], sep="\n")
+
+
+my_lst = {
+    "SANDIK NO / BOX NUM.": "B3", 
+    "SANDIK İÇ ADETİ / QTY. IN THE BOX": "300", 
+    # "SANDIK NO / BOX NUM.": "B4", 
+    # "SANDIK İÇ ADETİ / QTY. IN THE BOX": "400",
+    # "SANDIK NO / BOX NUM.": "B5", 
+    # "SANDIK İÇ ADETİ / QTY. IN THE BOX": "500",
+    # "SANDIK NO / BOX NUM.": "B6", 
+    # "SANDIK İÇ ADETİ / QTY. IN THE BOX": "700",
+    # "SANDIK NO / BOX NUM.": "B7", 
+    # "SANDIK İÇ ADETİ / QTY. IN THE BOX": "600"
+    }
+
+
+a = list(my_lst.values())
+print(a)
+# for i in my_lst.items():
+#     print(i)
