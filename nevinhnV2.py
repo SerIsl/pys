@@ -2,7 +2,7 @@
 from numpy import nan
 import pandas as pd
 
-dosya = "PR-220919-AG PROLUX 1200 TK BL 19.10.2022.xlsx"
+dosya = input("Dosya adını giriniz: ")
 
 df = pd.read_excel(dosya, dtype=str)
 
@@ -41,7 +41,7 @@ def cells(satir):
             tempdict["Kasa No"] = tmp.pop()
             tempdict["Malzeme Kodu"] = malzeme_kodu
             tempdict["Ürün Adı"] = ürün_adı
-            tempdict["Ürün Adı İng"] = ürün_adı_ing
+            tempdict["Ürün Adı İngilizce"] = ürün_adı_ing
             tempdict["Adet"] = value
             mydict1.append(tempdict)
 
