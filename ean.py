@@ -2,6 +2,15 @@ while True:
     ean = input("Sayı giriniz:\t")
     if ean.lower() == "ok":
         break
+    elif len(ean) < 12:
+        print(f"Girdiğiniz sayı en az 12 basamaklı olmalıdır. Girilen sayı {len(ean)} basamaklı.")
+        continue
+    elif len(ean) > 12:
+        print(f"Girdiğiniz sayı 12 basamaktan fazla. Girilen sayı {len(ean)} basamaklı.")
+        continue
+    elif not ean.isnumeric():
+        print("12 basamaklı bir sayı giriniz.")
+        continue
 
     tek = 0
     cift = 0
