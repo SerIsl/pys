@@ -1,7 +1,8 @@
 def ean_kontrol(ean=None):
 
-    if ean is None:
+    if ean is None or len(ean)<13:
         ean = input("Ean kodunu giriniz:\t")
+    
     
     tek = 0
     cift = 0
