@@ -13,13 +13,13 @@ def ean_kontrol(ean=None):
             tek += int(ean[i])
         
     kontrol_no = 10 - ((tek * 3 + cift)%10)
-    print(kontrol_no)
-    print(ean[-1])
+    
+
 
     if kontrol_no == int(ean[-1]):
         print(f"Girdiğiniz Ean numarası doğru. Ean:\t {ean}")
     else:
-        print("Girilen Ean numarası yanlış.")
+        print(f"Girilen Ean numarası yanlış. Olması gereken Ean numarası: {ean[:-1]+str(kontrol_no)}")
 
 
 def ean_olusturmak(): 
