@@ -1,4 +1,4 @@
-from http.client import OK
+
 from ean import *
 from main import *
 
