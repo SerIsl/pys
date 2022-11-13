@@ -1,3 +1,20 @@
+def ean_kontrol(ean):
+    tek = 0
+    cift = 0
+    for i in range(len(ean)):
+        if i % 2 == 0:
+            cift += int(ean[i])
+        else:
+            tek += int(ean[i])
+        
+    kontrol_no = 10 - ((tek * 3 + cift)%10)
+
+    if kontrol_no == ean[-1]:
+        print(f"Girdiğiniz Ean numarası doğru. Ean:\t {ean}")
+    else:
+        print("Girilen Ean numarası yalnış.")
+
+
 def ean_olusturmak(): 
     while True:
         ean = input("Sayı giriniz:\t")
