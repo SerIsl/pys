@@ -8,16 +8,20 @@ a = """Yapmak istediğiniz işlemi seçiniz:
             2: Ean Oluşturmak
             3: Barkod Oluşturmak
             4: Siralama yapmak
+            ok: Çıkış yapmak
             
             Giriş yapın: \t"""
 
-
+b = ["1", "2", "3", "4", "ok"]
 while True:
     print("-"*60)
     giris = input(a)
     print("-"*60)
     if giris.lower() == "ok":
         break
+    elif giris not in b:
+        print("Lütfen yapmak istediğiniz işlemi yukarıdaki listeden seçin!")
+        continue
 
     int_giris = int(giris)
     if int_giris == 1:
