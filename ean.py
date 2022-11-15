@@ -13,6 +13,9 @@ def ean_kontrol(ean=None):
             tek += int(ean[i])
         
     kontrol_no = 10 - ((tek * 3 + cift)%10)
+
+    if kontrol_no == 10:
+        kontrol_no = 0
     
 
 
