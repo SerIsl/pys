@@ -2,6 +2,7 @@
 from ean import *
 from main import *
 from sirala import *
+from denee import *
 
 a = """Yapmak istediğiniz işlemi seçiniz:
             1: Ean kontrol
@@ -12,7 +13,7 @@ a = """Yapmak istediğiniz işlemi seçiniz:
             
             Giriş yapın: \t"""
 
-b = ["1", "2", "3", "4", "ok"]
+b = ["1", "2", "3", "4", "5", "ok"]
 while True:
     print("-"*60)
     giris = input(a)
@@ -32,3 +33,5 @@ while True:
         seri_olusturmak()
     elif int_giris == 4:
         sirala()
+    elif int_giris == 5:
+        cozumle()

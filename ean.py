@@ -1,28 +1,32 @@
 def ean_kontrol(ean=None):
 
+
+    ean = input("Ean kodunu giriniz:\t")
     if ean is None or len(ean)<13:
-        ean = input("Ean kodunu giriniz:\t")
-    
-    
-    tek = 0
-    cift = 0
-    for i in range(len(ean)-1):
-        if i % 2 == 0:
-            cift += int(ean[i])
-        else:
-            tek += int(ean[i])
-        
-    kontrol_no = 10 - ((tek * 3 + cift)%10)
-
-    if kontrol_no == 10:
-        kontrol_no = 0
-    
-
-
-    if kontrol_no == int(ean[-1]):
-        print(f"Girdiğiniz Ean numarası doğru. Ean:\t {ean}")
+        print(f"Girdiğiniz EAN numarası 13 karakter olmalıdır. Girinlen EAN numarası {len(ean)} karakterdir.")
+        return
     else:
-        print(f"Girilen Ean numarası yanlış. Olması gereken Ean numarası: {ean[:-1]+str(kontrol_no)}")
+
+        tek = 0
+        cift = 0
+        for i in range(len(ean)-1):
+            if i % 2 == 0:
+                cift += int(ean[i])
+            else:
+                tek += int(ean[i])
+                
+        kontrol_no = 10 - ((tek * 3 + cift)%10)
+
+        if kontrol_no == 10:
+            kontrol_no = 0
+
+        if kontrol_no == int(ean[-1]):
+            print(f"Girdiğiniz Ean numarası doğru. Ean:\t {ean}")
+            return
+        else:
+            print(f"Girilen Ean numarası yanlış. Olması gereken Ean numarası: {ean[:-1]+str(kontrol_no)}")
+            return
+        
 
 
 def ean_olusturmak(): 
@@ -55,7 +59,8 @@ def ean_olusturmak():
             ean_kontrol_no = 0
 
         ean_no = ean + str(ean_kontrol_no)
-        print(ean_no)
+        print(f"EAN no:\t {ean_no}")
+        break
 
 # ean_olusturmak()
 # ean_kontrol()

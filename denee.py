@@ -105,33 +105,36 @@ harfTanimi = {
     'z': 'Akıllı Gazlı Fırın2',
     'Q': 'Rustik'
 }
-giris=input("Giriş Yapın: ")
-a = parcalaBeni(giris)
-m = "\n"
-for i in range(len(a)):
-    if i == 0:
-        for x in range(len(a[i])):
-            if x == 0:
-                m += modeller.get(a[i][x]) + '\n'
-            else:
-                m += tanim.get(a[i][x]) + '\n'
-            continue
-    if i == 1:
-        for x in range(len(a[i])):
-            if x == 0:
-                m += binlerB.get(a[i][x]) + '\n'
-            elif x == 1:
-                m += yuzlerB.get(a[i][x]) + '\n'
-            elif x == 2:
-                if a[i][x] == '0':
-                    m += 'Hot Platesiz\n'
+
+def cozumle():
+    giris=input("Giriş Yapın: ")
+    a = parcalaBeni(giris)
+    m = "\n"
+    for i in range(len(a)):
+        if i == 0:
+            for x in range(len(a[i])):
+                if x == 0:
+                    m += modeller.get(a[i][x]) + '\n'
                 else:
-                    m += a[i][x] + ' Hot Plateli\n'
-            elif x == 3:
-                m += birlerB.get(a[i][x]) + '\n'
-    if i == 2:
-        for x in range(len(a[i])):
-            m += harfTanimi.get(a[i][x]) + '\n'
+                    m += tanim.get(a[i][x]) + '\n'
+                continue
+        if i == 1:
+            for x in range(len(a[i])):
+                if x == 0:
+                    m += binlerB.get(a[i][x]) + '\n'
+                elif x == 1:
+                    m += yuzlerB.get(a[i][x]) + '\n'
+                elif x == 2:
+                    if a[i][x] == '0':
+                        m += 'Hot Platesiz\n'
+                    else:
+                        m += a[i][x] + ' Hot Plateli\n'
+                elif x == 3:
+                    m += birlerB.get(a[i][x]) + '\n'
+        if i == 2:
+            for x in range(len(a[i])):
+                m += harfTanimi.get(a[i][x]) + '\n'
 
 
-print(m, end="")
+    print(m, end="")
+    
