@@ -13,7 +13,7 @@ class SeriNum:
 
     def printe(self):
         print("-"*50)
-        s = f"{self.barkod}M{self.is_emri(self.isEmri)}{self.YIL}{self.hafta}{self.adet:>04}"
+        s = f"{self.barkod}M{self.is_emri(self.isEmri)}{self.YIL}{self.hafta:02}{self.adet:>04}"
         print("Barkod No: ", s)
         print("Uzunluk: ",len(s))
         print("-"*50)
