@@ -62,6 +62,7 @@ harfTanimi = {
     'D': 'Dijital Timer (Saat)',
     'D1': 'Dokunmatik Dijital Timer (Saat)',
     'e': 'Eskişehir Bekli',
+    'e1': 'Pirinç Bek Takımı ( Borulu Sistem )',
     'F': 'Flap Kapaklı',
     'G': 'Üst Cam Kapaklı (Glass)',
     'g': 'Securit cam',
@@ -79,8 +80,10 @@ harfTanimi = {
     'O': 'Kırmızı Boya',
     'O1': 'Parlak Kırmızı Boya',
     'o': 'Pembe Boya',
+    'o1': 'Koyu Pembe Boya (RAL 4010)',
     'P': 'Kahverengi Boya',
     'P1': 'Ön Panel ve Alt Kapak Ahşap Desen',
+    'P2': 'Koyu Kahverengi Boya',
     'p': 'Mor Boya',
     'p1': 'TDF renkli üst tabla',
     'R': 'Gri Boya',
@@ -98,11 +101,11 @@ harfTanimi = {
     'v': 'Vitro ceran',
     'Y': 'Yeşil Boya',
     'Y1': 'Parlak Yeşil Boya',
-    'Y2': 'Fıstık Yeşili Boya',
+    'Y2': 'Fıstık Yeşili Boya (RAL 250-3)',
     'y': 'Sarı Boya',
     'y1': 'Turuncu Boya',
     'Z': 'Akıllı Bek Gözü',
-    'z': 'Akıllı Gazlı Fırın2',
+    'z': 'Akıllı Gazlı Fırın',
     'Q': 'Rustik'
 }
 
