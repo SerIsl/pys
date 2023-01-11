@@ -1,19 +1,26 @@
-
+import os
+import subprocess
 from ean import *
 from main import *
 from sirala import *
 from denee import *
+
+def kasa():
+    os.chdir("C:\\Users\\SERKAN\\Desktop\\gitproject\\MyWorkouts")
+    subprocess.run(["python", "prep_casa.py"])
+
 
 a = """Yapmak istediğiniz işlemi seçiniz:
             1: Ean kontrol
             2: Ean Oluşturmak
             3: Barkod Oluşturmak
             4: Siralama yapmak
+            5: Kasa
             ok: Çıkış yapmak
             
             Giriş yapın: \t"""
 
-b = ["1", "2", "3", "4", "5", "ok"]
+b = ["1", "2", "3", "4", "5", "6", "ok"]
 while True:
     print("-"*60)
     giris = input(a)
@@ -34,4 +41,6 @@ while True:
     elif int_giris == 4:
         sirala()
     elif int_giris == 5:
+        kasa()
+    elif int_giris == 6:
         cozumle()
