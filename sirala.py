@@ -1,18 +1,17 @@
 def sirala():
-    all = []
+    all = set()
     entry = ""
+    mod = int(input("Lütfen Modu seçin (0/1):"))
     while True:
         entry = input('Bitirmek için ok yaz!\ngiriş yap:\t')
-        if entry == "ok":
+        if entry.lower() == "ok":
             break
         
-        if int(entry) in all:
-            print("Bu kayıt daha önce girilmiş başka bir sayı ile tekrar dene!")
-            continue
+        if mod == 1:
+            all.add(entry)
         else:    
-            all.append(int(entry))
-
-    all.sort()
+            all.add(int(entry))
+    list_all = list(all)
+    list_all.sort()
     print(*all, sep="\n")
     print("Toplam kayıt sayısı:", len(all))
-
