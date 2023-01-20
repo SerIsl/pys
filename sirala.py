@@ -30,4 +30,3 @@ def sirala():
     print("benzerler: ", list_same )
     print("sayısı: ", len(list_same))
 
-sirala()
