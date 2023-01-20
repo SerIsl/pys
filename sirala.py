@@ -25,7 +25,9 @@ def sirala():
     list_all = list(all)
     list_same = list(same)
     list_all.sort()
-    print(*all, sep="\n")
-    print("Toplam kayıt sayısı:", len(all))
+    print(*list_all, sep="\n")
+    print("Toplam kayıt sayısı:", len(list_all))
     print("benzerler: ", list_same )
     print("sayısı: ", len(list_same))
+
+sirala()
