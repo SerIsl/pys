@@ -2,7 +2,7 @@ def ean_kontrol(ean=None):
 
 
     ean = input("Ean kodunu giriniz:\t")
-    if ean is None or len(ean)<13:
+    if ean is None or len(ean)<13 or len(ean)>13:
         print(f"Girdiğiniz EAN numarası 13 karakter olmalıdır. Girinlen EAN numarası {len(ean)} karakterdir.")
         return
     else:
