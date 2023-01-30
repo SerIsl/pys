@@ -1,6 +1,6 @@
 def sirala():
     all = set()
-    same = set()
+    same = {}
     entry = ""
     mod = int(input("Lütfen Modu seçin (0/1):"))
     while True:
@@ -11,22 +11,27 @@ def sirala():
         if mod == 1:
             if entry in all:
                 print("Hey dostum bu daha önce girilmiş başka bi tane dene!")
-                same.add(entry)
+                if entry in same.keys():
+                    same[entry] += 1
+                else:
+                    same[entry] = 1
                 continue
             else:
                 all.add(entry)
         else: 
-            if int(entry) in all:
+            intent = int(entry)
+            if intent in all:
                 print("Hey dostum bu daha önce girilmiş başka bi tane dene!")
-                same.add(int(entry))
+                if intent in same.keys():
+                    same[intent] += 1
+                else:
+                    same[intent] = 1
                 continue
             else:
-                all.add(int(entry))
+                all.add(intent)
     list_all = list(all)
-    list_same = list(same)
     list_all.sort()
     print(*list_all, sep="\n")
     print("Toplam kayıt sayısı:", len(list_all))
-    print("benzerler: ", list_same )
-    print("sayısı: ", len(list_same))
-
+    print("Benzerler: ", same)
+    print("Benzerlerin toplam sayısı: ", sum(list(same.values())))
