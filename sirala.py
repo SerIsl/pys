@@ -15,10 +15,7 @@ def sirala():
         if mod == 1:
             if entry in all:
                 print("Hey dostum bu daha önce girilmiş başka bi tane dene!")
-                if entry in same.keys():
-                    same[entry] += 1
-                else:
-                    same[entry] = 1
+                same[entry] = same.setdefault(entry, 0) + 1
                 continue
             else:
                 all.add(entry)
@@ -26,10 +23,7 @@ def sirala():
             intent = int(entry)
             if intent in all:
                 print("Hey dostum bu daha önce girilmiş başka bi tane dene!")
-                if intent in same.keys():
-                    same[intent] += 1
-                else:
-                    same[intent] = 1
+                same[entry] = same.setdefault(entry, 0) + 1
                 continue
             else:
                 all.add(intent)
