@@ -4,7 +4,11 @@ def sirala():
     entry = ""
     mod = int(input("Lütfen Modu seçin (0/1):"))
     while True:
+        print(f"\nGirilerin toplam sayısı: {len(all)}")
         entry = input('Bitirmek için ok yaz!\ngiriş yap:\t')
+
+        
+
         if entry.lower() == "ok":
             break
         
