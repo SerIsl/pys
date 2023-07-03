@@ -1,14 +1,14 @@
 from unicodedata import numeric
 import pandas as pd
 
-dosya = "DemonteM20220000000429.xls"
+dosya = "Kopya DemonteM20230000000214.xlsx"
 
 df = pd.read_excel(dosya)
 
 
 sozluk = df.to_dict("records")
 
-dict_3 = sozluk[133]
+# dict_3 = sozluk[133]
 # print(sozluk)
 
 def cells(satir):
@@ -33,7 +33,7 @@ def cells(satir):
         elif "Sandık/Miktar" in key:
             kasa = value.split("/")[0].replace(" ", "")
             if kasa.isnumeric():
-                kasa_no = "M"+kasa
+                kasa_no = "_"+kasa
             else:
                 kasa_no = kasa 
             
