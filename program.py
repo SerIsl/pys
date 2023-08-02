@@ -46,7 +46,7 @@ def program():
             cozumle()
 
 doldur = lambda x, y: print(f"{x}"*y)
-degis = lambda x, y, z: print(x.replace(y, z)) 
+degis = lambda x, y=" ", z="": print(x.replace(y, z)) 
 def cdir():
     import os
     os.chdir("C:\\Users\\SERKAN\\Desktop\\yeni_klasor")
