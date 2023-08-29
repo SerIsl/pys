@@ -1,6 +1,14 @@
 import pandas as pd
+import os
+import re
+
+def yol_rep(x):
+    yolr = re.sub(r"\\", "\\\\", x)
+    return yolr
 
 def eklemeli(x):
+
+    os.chdir(yol_rep(r"C:\Users\SERKAN\Desktop\yeni_klasor"))
     barkod = input("barkodu giriniz: ")
     
     li = [barkod + f"{str(y):>04}" for y in x]
