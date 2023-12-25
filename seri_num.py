@@ -1,6 +1,6 @@
 class SeriNum:
 
-    YIL = 23
+    YIL = 24
 
     def __init__(self, barkod, isEmri, hafta, adet) -> None:
         self.barkod = barkod
